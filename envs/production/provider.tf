@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "ap-northeast-1"
 }
 
 terraform {
@@ -8,12 +8,13 @@ terraform {
       source  = "hashicorp/aws"
       version = "4.52.0"
     }
-    random = {
-      source  = "hashicorp/random"
-      version = "3.4.3"
+    cloud {
+      organization = "wakame"
+
+      workspaces {
+        name = "aws-cronjob"
+      }
     }
   }
-  required_version = ">= 1.1.0"
+  required_version = "1.4.6"
 }
-
-
