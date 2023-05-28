@@ -15,7 +15,7 @@ resource "aws_iam_openid_connect_provider" "tfc_provider" {
 */
 
 data "aws_iam_openid_connect_provider" "tfc_provider_data" {
-  arn = "arn:aws:iam::738591566353:oidc-provider/app.terraform.io"
+  arn = "arn:aws:iam::086854724267:oidc-provider/app.terraform.io"
 }
 
 resource "aws_iam_role" "tfc_role" {
